@@ -21,7 +21,7 @@ async function analyzeLinguistic() {
   resultBox.innerHTML = "⏳ جاري التحليل...";
 
   try {
-    const response = await fetch("http://localhost:5000/analyze", {
+    const response = await fetch("https://lingoadz-backend.onrender.com/analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ word: input })  // ✅ send the word
@@ -64,7 +64,7 @@ async function analyzeForensic() {
   resultBox.innerHTML = "⏳ جاري التحليل...";
 
   try {
-    const response = await fetch("http://localhost:5000/analyze", {
+    const response = await fetch("https://lingoadz-backend.onrender.com/analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ word: input })  // ✅ send the word
