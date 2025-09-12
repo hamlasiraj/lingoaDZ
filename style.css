@@ -1,0 +1,52 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #f0f0f0, #dfe6e9);
+  direction: rtl;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #2d3436;
+  margin-bottom: 30px;
+}
+
+textarea {
+  width: 80%;
+  height: 100px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #74b9ff;
+}
+
+#analysisResult {
+  margin-top: 30px;
+  text-align: right;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#newExpressionForm input {
+  margin: 5px;
+  padding: 8px;
+  width: 70%;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

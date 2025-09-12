@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>تحليل الألفاظ الجزائرية</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="./scripts.js"></script>
+    <h1>الألفاظ الجزائرية المحلية وتحليلها اللساني في السياق الجنائي</h1>
+
+    <textarea id="textInput" placeholder="أدخل الخطاب هنا..."></textarea><br />
+    <button onclick="analyzeLinguistic()">التحليل اللساني</button>
+    <button onclick="analyzeForensic()">التحليل الجنائي</button>
+
+    <div id="analysisResult"></div>
+  </body>
+</html>
+<!DOCTYPE html>
+<div id="spokenMenu" style="display: none; margin-top: 10px">
+  <input type="file" accept="audio/*" id="audioInput" /><br /><br />
+  <button onclick="analyzeSpokenLinguistic()">📊 التحليل اللساني</button>
+  <button onclick="analyzeSpokenForensic()">⚖️ اللسانيات الجنائية</button>
+  <p id="spokenResult"></p>
+</div>
