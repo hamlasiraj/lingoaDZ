@@ -1,25 +1,73 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>تحليل الألفاظ الجزائرية</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="wrap">
+      <header>
+        <h1>الألفاظ الجزائرية المحلية وتحليلها اللساني في السياق الجنائي</h1>
+        <p class="lead">
+          اكتب كلمة، جملة أو فقرة بالدارجة الجزائرية ثم اختر نوع التحليل.
+        </p>
+      </header>
+
+      <div class="card">
+        <div class="input-area">
+          <textarea id="textInput" placeholder="أدخل الخطاب هنا..."></textarea>
+
+          <div class="controls">
+            <button class="btn btn-primary" onclick="analyzeLinguistic()">
+              <span class="icon">🧠</span>
+              التحليل اللساني
+            </button>
+
+            <button class="btn btn-secondary" onclick="analyzeForensic()">
+              <span class="icon">📍</span>
+              التحليل المحلي
+            </button>
+
+            <button class="btn btn-ghost" id="clearBtn">مسح</button>
+
+            <div
+              id="loading"
+              class="flex"
+              style="display: none; margin-left: 8px"
+            >
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-area">
+          <div class="result-grid">
+            <div id="analysisResult" class="analysis">
+              <span class="muted">لم يتم تنفيذ أي تحليل بعد.</span>
+            </div>
+
+            <aside class="sidebar">
+              <div class="mini">ملاحظات حول الاستخدام</div>
+              <ul style="padding-left: 12px; margin: 0 0 8px">
+                <li class="muted">استخدم عبارة كاملة للحصول على نتائج أدق.</li>
+                <li class="muted">
+                  يمكنك تجربة تحليلين متتاليين للحصول على فروق.
+                </li>
+                <li class="muted">اضغط على عنوان القسم لعرض/إخفاء التفاصيل.</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ linked external JS -->
     <script src="./scripts.js"></script>
-    <h1>الألفاظ الجزائرية المحلية وتحليلها اللساني في السياق الجنائي</h1>
-
-    <textarea id="textInput" placeholder="أدخل الخطاب هنا..."></textarea><br />
-    <button onclick="analyzeLinguistic()">التحليل اللساني</button>
-    <button onclick="analyzeForensic()">التحليل الجنائي</button>
-
-    <div id="analysisResult"></div>
   </body>
 </html>
-<!DOCTYPE html>
-<div id="spokenMenu" style="display: none; margin-top: 10px">
-  <input type="file" accept="audio/*" id="audioInput" /><br /><br />
-  <button onclick="analyzeSpokenLinguistic()">📊 التحليل اللساني</button>
-  <button onclick="analyzeSpokenForensic()">⚖️ اللسانيات الجنائية</button>
-  <p id="spokenResult"></p>
-</div>
